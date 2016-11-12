@@ -13,6 +13,8 @@
 			<a id="nav-about" class="nav-link" routerLink="/about" routerLinkActive="active" [ngClass]="navAnimation">About Me</a>
 			<a id="nav-contact" class="nav-link" routerLink="/contact" routerLinkActive="active" [ngClass]="navAnimation">Contact</a>
 		</nav>
-		<router-outlet class="col-lg-10"></router-outlet>
+		<div class="col-lg-10">
+			<router-outlet></router-outlet>
+		</div>
 	</div>
 </div>

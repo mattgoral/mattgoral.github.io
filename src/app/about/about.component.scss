@@ -1,0 +1,6 @@
+@import "~compass-mixins/lib/_animate";
+@import "../app.component";
+
+#about {
+	@include animation-duration($animation-master);
+}

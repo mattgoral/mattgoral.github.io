@@ -1,6 +1,6 @@
 @import "~compass-mixins/lib/_animate";
 
-$total-animation: .5s;
+$animation-master: .5s;
 
 nav {
 	.active {
@@ -15,28 +15,28 @@ nav {
 	#nav-home {
 		$home: 0s;
 		@include animation-delay($home);
-		@include animation-duration($total-animation - $home);
+		@include animation-duration($animation-master - $home);
 	}
 
 	#nav-work {
 		$work: .1s;
 		@include animation-delay($work);
-		@include animation-duration($total-animation - $work);
+		@include animation-duration($animation-master - $work);
 	}
 	
 	#nav-about {
 		$about: .2s;
 		@include animation-delay($about);
-		@include animation-duration($total-animation - $about);
+		@include animation-duration($animation-master - $about);
 	}
 
 	#nav-contact {
 		$contact: .3s;
 		@include animation-delay($contact);
-		@include animation-duration($total-animation - $contact);
+		@include animation-duration($animation-master - $contact);
 	}
 
 	.title, .nav-link {
-    animation-duration: $total-animation;
+    animation-duration: $animation-master;
 	}
 }
