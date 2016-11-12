@@ -1,15 +1,98 @@
 @import "~compass-mixins/lib/_animate";
+@import "~compass-mixins/lib/_compass";
+
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
 
 $animation-master: .5s;
 
+$bullet-start-size: 4px;
+$bullet-end-size: 8px;
+$bullet-container-size: 12px;
+$bullet-transition: .2s;
+
+app-root {
+	font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+	font-weight: 300;
+}
+
+.title {
+	display: inline-block;
+	font-size: 30px;
+	font-weight: 300;
+	@media screen and (max-width: $screen-md) {
+		margin: 20px 20px 0 0;
+	}
+}
+
 nav {
+	display: inline-block;
+
 	.active {
-		font-weight: bold;
+		font-weight: 700;
+		padding: 0px;
 	}
 
-	.nav-link {
+	.nav-item {
+		@media screen and (min-width: $screen-md) {
+			border-bottom: 2px solid white;
+
+		}
+
+		@media screen and (min-width: $screen-md) {
+			width: 100%;
+			margin-bottom: 3px;
+		}
+
 		display: inline-block;
-		width: 100%;
+		margin-right: 10px;
+		color: #666;
+		text-decoration: none;
+
+		.bullet-container {
+			@media screen and (max-width: $screen-md) {
+				display: none;
+			}
+			display: inline-block;
+			width: $bullet-container-size;
+			height: $bullet-container-size;
+			padding: (($bullet-container-size - $bullet-start-size) / 2);
+			text-align: center;
+
+			.bullet {
+				border-radius: 100%;
+				width: $bullet-start-size;
+				height: $bullet-start-size;
+				border: 1px solid #333;
+			}
+		}
+
+		&:hover, &.active {
+			@media screen and (max-width: $screen-md) {
+				border-bottom: 2px solid #333;
+				@include transition(.05s);
+			}
+			@media screen and (min-width: $screen-md) {
+				.bullet-container {
+					padding: (($bullet-container-size - $bullet-end-size) / 2);
+					@include transition($bullet-transition);
+					.nav-text {
+						color: #333;
+						@include transition($bullet-transition);
+					}
+					.bullet {
+						width: $bullet-end-size;
+						height: $bullet-end-size;
+						border: 1px solid #333;
+						@include transition($bullet-transition);
+					}
+				}
+			}
+		}
 	}
 
 	#nav-home {

@@ -3,4 +3,6 @@
 
 #home {
 	@include animation-duration($animation-master);
+
+	background-color: #ccc;
 }

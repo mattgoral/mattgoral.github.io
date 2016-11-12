@@ -1,19 +1,37 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-12">
+		<div class="navbar col-sm-12 col-md-2">
 			<h1 class="title" [ngClass]="titleAnimation">
-			  Matt Goral
+				  Matt Goral
 			</h1>
+			<nav>
+				<a id="nav-home" class="nav-item" routerLink="/home" routerLinkActive="active" [ngClass]="navAnimation">
+					<div class="bullet-container">
+						<div class="bullet"></div>
+					</div>
+					<span class="nav-text">Home</span>
+				</a>
+				<a id="nav-work" class="nav-item" routerLink="/work" routerLinkActive="active" [ngClass]="navAnimation">
+					<div class="bullet-container">
+						<div class="bullet"></div>
+					</div>
+					<span class="nav-text">Work</span>
+				</a>
+				<a id="nav-about" class="nav-item" routerLink="/about" routerLinkActive="active" [ngClass]="navAnimation">
+					<div class="bullet-container">
+						<div class="bullet"></div>
+					</div>
+					<span class="nav-text">About</span>
+				</a>
+				<a id="nav-contact" class="nav-item" routerLink="/contact" routerLinkActive="active" [ngClass]="navAnimation">
+					<div class="bullet-container">
+						<div class="bullet"></div>
+					</div>
+					<span class="nav-text">Contact</span>
+				</a>
+			</nav>
 		</div>
-	</div>
-	<div class="row">
-		<nav class="col-lg-2">
-			<a id="nav-home" class="nav-link" routerLink="/home" routerLinkActive="active" [ngClass]="navAnimation">Home</a>
-			<a id="nav-work" class="nav-link" routerLink="/work" routerLinkActive="active" [ngClass]="navAnimation">My Work</a>
-			<a id="nav-about" class="nav-link" routerLink="/about" routerLinkActive="active" [ngClass]="navAnimation">About Me</a>
-			<a id="nav-contact" class="nav-link" routerLink="/contact" routerLinkActive="active" [ngClass]="navAnimation">Contact</a>
-		</nav>
-		<div class="col-lg-10">
+		<div class="content col-sm-12 col-md-10">
 			<router-outlet></router-outlet>
 		</div>
 	</div>
