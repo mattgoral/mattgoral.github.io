@@ -1,0 +1,32 @@
+nav {
+	.active {
+		font-weight: bold;
+	}
+
+	.nav-link {
+		display: inline-block;
+		width: 100%;
+	}
+
+	#nav-home {}
+
+	#nav-work {
+		-webkit-animation-delay: .1s;
+    animation-delay: .1s;
+	}
+	
+	#nav-about {
+		-webkit-animation-delay: .2s;
+    animation-delay: .2s;
+	}
+
+	#nav-contact {
+		-webkit-animation-delay: .3s;
+    animation-delay: .3s;
+	}
+
+	.title, .nav-link {
+		-webkit-animation-duration: .5s;
+    animation-duration: .5s;
+	}
+}

@@ -1,13 +1,18 @@
-<h1 class="title">
-  {{title}}
-</h1>
-<nav>
-	<a routerLink="/home" routerLinkActive="active">Home</a>
-	<br/>
-	<a routerLink="/work" routerLinkActive="active">My Work</a>
-	<br/>
-	<a routerLink="/about" routerLinkActive="active">About Me</a>
-	<br/>
-	<a routerLink="/contact" routerLinkActive="active">Contact</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="title" [ngClass]="titleAnimation">
+			  Matt Goral
+			</h1>
+		</div>
+	</div>
+	<div class="row">
+		<nav class="col-lg-2">
+			<a id="nav-home" class="nav-link" routerLink="/home" routerLinkActive="active" [ngClass]="navAnimation">Home</a>
+			<a id="nav-work" class="nav-link" routerLink="/work" routerLinkActive="active" [ngClass]="navAnimation">My Work</a>
+			<a id="nav-about" class="nav-link" routerLink="/about" routerLinkActive="active" [ngClass]="navAnimation">About Me</a>
+			<a id="nav-contact" class="nav-link" routerLink="/contact" routerLinkActive="active" [ngClass]="navAnimation">Contact</a>
+		</nav>
+		<router-outlet class="col-lg-10"></router-outlet>
+	</div>
+</div>
