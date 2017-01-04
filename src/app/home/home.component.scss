@@ -81,9 +81,11 @@ $tab-angle: 10px;
 				font-size: $tab-height / 2.75;
 				border-top: 1px solid #aaa;
 				display: inline-block;
-				width: 75px;
+				width: 100px;
 				padding: 0 6px;
-				background: $tab-inactive-color; 
+				background: $tab-inactive-color;
+
+				i { margin-right: 4px; }
 			}
 
 			.tab-angle {
@@ -135,6 +137,7 @@ $tab-angle: 10px;
 
 			&.active {
 				z-index: 1;
+				border-bottom: 1px solid $tab-active-color;
 				.tab-text { background: $tab-active-color; }
 				.left-angle::before { border-bottom: $tab-height solid $tab-active-color; }
 				.right-angle::after { border-left: $tab-angle solid $tab-active-color; }
@@ -144,8 +147,13 @@ $tab-angle: 10px;
 		.url-bar {
 			background: $url-bar-color;
 			border-top: 1px solid $url-border-color;
-			height: 30px;
 			margin-top: -1px;
+			padding: 4px;
+
+			.input-sm {
+				height: 26px;
+				padding: 2px 10px;
+			}
 		}
 	}
 }
