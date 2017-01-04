@@ -10,6 +10,9 @@ import { WorkComponent } from './work/work.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TabWelcomeComponent } from './tab-welcome/tab-welcome.component';
+import { TabAboutSiteComponent } from './tab-about-site/tab-about-site.component';
+import { TabEasterEggsComponent } from './tab-easter-eggs/tab-easter-eggs.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TabWelcomeComponent,
+    TabAboutSiteComponent,
+    TabEasterEggsComponent
   ],
   imports: [
     BrowserModule,

@@ -31,7 +31,9 @@
 				<input type="text" class="form-control input-sm">
 			</div>
 			<div class="browser-body">
-				<div class="browser-content" *ngFor="let tab of tabs" [class.active]="tab.active">{{ tab.url }}</div>
+				<app-tab-welcome [hidden]="contentActive != 'app-tab-welcome'"></app-tab-welcome>
+				<app-tab-about-site [hidden]="contentActive != 'app-tab-about-site'"></app-tab-about-site>
+				<app-tab-easter-eggs [hidden]="contentActive != 'app-tab-easter-eggs'"></app-tab-easter-eggs>
 			</div>
 		</div>
 	</div>

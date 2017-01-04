@@ -7,21 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 	loadAnimation = '';
+	contentActive = 'app-tab-welcome';
 
 	tabs = [{
             title: 'easter eggs!',
             icon: 'fa-smile-o',
-            url: 'tab-easter-eggs.tpl.html',
+            url: 'app-tab-easter-eggs',
             active: false
         }, {
             title: 'about this site',
             icon: 'fa-info-circle',
-            url: 'tab-about.tpl.html',
+            url: 'app-tab-about-site',
             active: false
         }, {
             title: 'welcome',
             icon: 'fa-star',
-            url: 'tab-welcome.tpl.html',
+            url: 'app-tab-welcome',
             active: true
     }];
 
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
 			tab.active = false;
 		});
 		tab.active = true;
+		this.contentActive = tab.url;
 	}
 
   ngOnInit() {
