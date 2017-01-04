@@ -6,37 +6,20 @@
 				<div class="browser-button yellow"></div>
 				<div class="browser-button green"></div>
 				<div class="tabs">
-					<div class="tab">
+
+					<div class="tab" *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
 						<div class="tab-angle left-angle"></div>
 						<div class="tab-body">
 							<div class="tab-text">
-								<i class="fa fa-smile-o"></i>
-								Easter Eggs!
+								<i class="fa" [ngClass]="tab.icon"></i>
+								{{ tab.title }}
 							</div>
 						</div>
 						<div class="tab-angle right-angle"></div>
 					</div>
-					<div class="tab">
-						<div class="tab-angle left-angle"></div>
-						<div class="tab-body">
-							<div class="tab-text">
-								<i class="fa fa-info-circle"></i>
-								About This Site
-							</div>
-						</div>
-						<div class="tab-angle right-angle"></div>
-					</div>
-					<div class="tab active">
-						<div class="tab-angle left-angle"></div>
-						<div class="tab-body">
-							<div class="tab-text">
-								<i class="fa fa-star"></i>
-								Welcome
-							</div>
-						</div>
-						<div class="tab-angle right-angle"></div>
-					</div>
+
 				</div>
+
 			</div>
 			<div class="url-bar">
 				<div class="url-buttons">
@@ -47,7 +30,9 @@
 				</div>
 				<input type="text" class="form-control input-sm">
 			</div>
-			<h2>My name is Matt.  I write poetry for your browser.</h2>
+			<div class="browser-body">
+				<div class="browser-content" *ngFor="let tab of tabs" [class.active]="tab.active">{{ tab.url }}</div>
+			</div>
 		</div>
 	</div>
 </div>
