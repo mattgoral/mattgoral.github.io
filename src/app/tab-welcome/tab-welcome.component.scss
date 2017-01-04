@@ -1,0 +1,11 @@
+@import "../app.component";
+
+#welcome-container {
+	padding: 50px;
+	text-align: center;
+	.hello {
+		font-size: 8em;
+		margin-bottom: 50px;
+	}
+	.tagline { font-size: 4em; }
+}

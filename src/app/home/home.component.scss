@@ -20,7 +20,7 @@ $tab-angle: 10px;
 		border: 1px solid #aaa;
 		border-radius: $browser-border-radius;
 		box-shadow: 0 0 10px #bbb;
-		margin-top: 5%;
+		margin-top: 10%;
 
 		.browser-header {
 			background: $browser-header-color;
@@ -66,6 +66,7 @@ $tab-angle: 10px;
 			position: relative;
 			vertical-align: top;
 			z-index: 0;
+			&:hover { cursor: pointer; }
 
 			.tab-body, .tab-text, .tab-angle { display: inline-block; }
 
