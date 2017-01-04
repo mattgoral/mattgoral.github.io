@@ -1,8 +1,151 @@
 @import "~compass-mixins/lib/_animate";
 @import "../app.component";
 
+$browser-button-size: 10px;
+$browser-border-radius: 5px;
+$browser-header-color: #ddd;
+$url-bar-color: #f1f1f1;
+$url-border-color: #aaa;
+
+$tab-active-color: $url-bar-color;
+$tab-inactive-color: #ccc;
+
+$tab-height: 30px;
+$tab-angle: 10px;
+
 #home {
 	@include animation-duration($animation-master);
 
-	background-color: #ccc;
+	.browser {
+		border: 1px solid #aaa;
+		border-radius: $browser-border-radius;
+		box-shadow: 0 0 10px #bbb;
+		margin-top: 5%;
+
+		.browser-header {
+			background: $browser-header-color;
+			border-radius: $browser-border-radius $browser-border-radius 0px 0px;
+			padding-left: 10px;
+		}
+
+		.browser-button {
+			border-radius: 100%;
+			display: inline-block;
+			height: $browser-button-size;
+			margin: 12px 2px;
+			width: $browser-button-size;
+			vertical-align: top;
+
+			&.red {
+				background: #ef6a5e;
+				border: 1px solid #d25145;
+			}
+
+			&.yellow {
+				background: #f7be4f;
+				border: 1px solid #d7a042;
+			}
+
+			&.green {
+				background: #60c655;
+				border: 1px solid #52a640;
+			}
+		}
+
+		.tabs {
+			display: inline-block;
+			margin-left: 30px;
+			vertical-align: top;
+		}
+
+		.tab {
+			display: inline-block;
+			vertical-align: top;
+			z-index: 100;
+			margin-top: 5px;
+			margin-left: -10px;
+			position: relative;
+			z-index: 0;
+			float: right;
+
+
+			.tab-body {
+				height: $tab-height;
+				display: inline-block;
+				background: $browser-header-color;
+			}
+
+			.tab-text {
+				margin-top: 1px;
+				line-height: $tab-height - 2px;
+				font-size: $tab-height / 2.75;
+				border-top: 1px solid #aaa;
+				display: inline-block;
+				width: 75px;
+				padding: 0 6px;
+				background: $tab-inactive-color; 
+			}
+
+			.tab-angle {
+				display: inline-block;
+				vertical-align: top;
+				font-size: 0px;
+				line-height: 0%;
+				width: 0px;
+			}
+
+			.tab-angle::before {
+				content: '';
+				vertical-align: top;
+				font-size: 0px;
+				line-height: 0%;
+				width: 0px;
+			}
+
+			.tab-angle::after {
+				content: '';
+				vertical-align: top;
+				font-size: 0px;
+				line-height: 0%;
+				width: 0px;
+			}
+
+			.left-angle {
+				border-bottom: $tab-height solid $url-border-color;
+				border-left: 10px solid transparent;
+				margin-right: -4px
+			}
+			.left-angle::before {
+				border-bottom: $tab-height solid $tab-inactive-color;
+				border-left: $tab-angle solid transparent;
+				margin-left: ($tab-angle - 1px) * -1;
+			}
+
+			.right-angle {
+				border-top: $tab-height solid transparent;
+				border-left: $tab-angle solid $url-border-color;
+				margin-left: -4px;
+			}
+
+			.right-angle::after {
+				border-top: $tab-height solid transparent;
+				border-left: $tab-angle solid $tab-inactive-color;
+				margin-left: ($tab-angle + 1px) * -1;
+			}
+
+			&.active {
+				z-index: 1;
+				.tab-text { background: $tab-active-color; }
+				.left-angle::before { border-bottom: $tab-height solid $tab-active-color; }
+				.right-angle::after { border-left: $tab-angle solid $tab-active-color; }
+			}
+		}
+
+		.url-bar {
+			background: $url-bar-color;
+			border-top: 1px solid $url-border-color;
+			height: 30px;
+			margin-top: -1px;
+		}
+	}
 }
