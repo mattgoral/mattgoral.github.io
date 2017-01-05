@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-about-site.component.scss']
 })
 export class TabAboutSiteComponent implements OnInit {
-
-  constructor() { }
+	aboutContentAnimationTitle = '';
+	aboutContentAnimationText = '';
 
   ngOnInit() {
+  	this.aboutContentAnimationTitle = 'animated fadeInUp';
+  	this.aboutContentAnimationText = 'animated fadeInUp';
   }
-
 }

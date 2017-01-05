@@ -14,13 +14,12 @@ $tab-height: 30px;
 $tab-angle: 10px;
 
 #home {
-	@include animation-duration($animation-master);
-
 	.browser {
 		border: 1px solid #aaa;
 		border-radius: $browser-border-radius;
 		box-shadow: 0 0 10px #bbb;
 		margin-top: 10%;
+		@include animation-duration($animation-master);
 
 		.browser-header {
 			background: $browser-header-color;

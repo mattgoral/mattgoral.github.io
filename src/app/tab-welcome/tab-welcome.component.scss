@@ -7,5 +7,9 @@
 		font-size: 8em;
 		margin-bottom: 50px;
 	}
-	.tagline { font-size: 4em; }
+	.tagline {
+		font-size: 4em;
+		@include animation-delay($animation-master);
+		@include animation-duration($animation-master);
+	}
 }

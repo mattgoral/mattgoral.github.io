@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-welcome.component.scss']
 })
 export class TabWelcomeComponent implements OnInit {
-
-  constructor() { }
+	helloAnimation = '';
+	taglineAnimation = '';
 
   ngOnInit() {
+  	this.helloAnimation = "animated tada";
+  	this.taglineAnimation = "animated fadeInUp";
   }
 
 }

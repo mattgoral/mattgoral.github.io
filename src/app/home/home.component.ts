@@ -35,6 +35,6 @@ export class HomeComponent implements OnInit {
 	}
 
   ngOnInit() {
-  	this.loadAnimation = 'animated fadeInRight';
+  	this.loadAnimation = 'animated zoomIn';
   }
 }
