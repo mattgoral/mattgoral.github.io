@@ -67,7 +67,6 @@ nav {
 	.nav-item {
 		@media screen and (min-width: $screen-md) {
 			border-bottom: 2px solid white;
-
 		}
 
 		@media screen and (min-width: $screen-md) {
@@ -156,9 +155,21 @@ nav {
 }
 
 .page-title {
-	margin: 27px 0 15px 0;
+	font-size: 50px;
+	margin: 50px 0 15px 0;
+	text-align: center;
+	@media screen and (min-width: $screen-md) {
+		margin: 20px 0 15px 0;
+		text-align: right;
+	}
+}
+
+section {
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .section-title {
-	text-align: center;
+	font-size: 30px;
+	margin-bottom: 20px;
 }
