@@ -3,4 +3,15 @@
 
 #contact {
 	@include animation-duration($animation-master);
+
+	.contact-link-text {
+		text-align: center;
+		font-size: 80px;
+		margin-top: 100px;
+
+		.small-text {
+			position: relative;
+			top: 8px;
+		}
+	}
 }
