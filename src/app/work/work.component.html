@@ -1,16 +1,16 @@
-<div id="work" class="page row" [ngClass]="loadAnimation">
+<div id="work" class="page row">
 	<div class="col-xs-10 col-xs-offset-1">
-		<h2 class="page-title">My Work</h2>
+		<h2 class="page-title" [ngClass]="loadAnimation">My Work</h2>
 	</div>
 	<section class="what-i-do col-xs-10 col-xs-offset-1 col-md-offset-0">
 		<div class="row">
 			<div class="col-xs-12">
-				<h3 class="section-title">What I Do</h3>
+				<h3 class="section-title" [ngClass]="loadAnimation">What I Do</h3>
 			</div>
 			<div class="col-xs-12">
-				<p class="what-i-do-text">I am a user focused software engineer that has an obsession with efficient design.  I use Web 2.0 technologies to build innovative new ways to experience and interact with digital media.  I thrive in creative, cutting edge, and fast paced environments.</p>
+				<p class="what-i-do-text" [ngClass]="loadAnimation">I am a user focused software engineer that has an obsession with efficient design.  I use Web 2.0 technologies to build innovative new ways to experience and interact with digital media.  I thrive in creative, cutting edge, and fast paced environments.</p>
 				<br/>
-				<p class="body-text">I am currently working on a sharing economy app to utilize unused items laying around people's houses.  A while back, while I was staying in an AirBnB in Hawaii attempting to learn to surf, there was an unused surfboard hanging on the wall.  It seemed to me that there must be thousands of items like this in people's houses across the island and that it would be much more efficient to put them to use.  So, I started building an app to make this easy to do.  I am building the app end to end in Javascript, using MongoDB, ExpressJS, Angular2, and NodeJS and the Ionic Framework to deploy Angular code natively to mobile devices.
+				<p class="body-text" [ngClass]="loadAnimation">I am currently working on a sharing economy app to utilize unused items laying around people's houses.  A while back, while I was staying in an AirBnB in Hawaii attempting to learn to surf, there was an unused surfboard hanging on the wall.  It seemed to me that there must be thousands of items like this in people's houses across the island and that it would be much more efficient to put them to use.  So, I started building an app to make this easy to do.  I am building the app end to end in Javascript, using MongoDB, ExpressJS, Angular2, and NodeJS and the Ionic Framework to deploy Angular code natively to mobile devices.
 				</p>
 			</div>
 		</div>
@@ -18,10 +18,10 @@
 	<section class="past-projects col-xs-10 col-xs-offset-1 col-md-offset-0">
 		<div class="row">
 			<div class="col-xs-12">
-				<h3 class="section-title">Past Projects</h3>
+				<h3 class="section-title" [ngClass]="loadAnimation">Past Projects</h3>
 			</div>
 			<div class="projects col-xs-12">
-				<div class="project">
+				<div class="project kensho" [ngClass]="loadAnimation">
 					<a class="link" href="http://www.kensho.com" target="_blank">
 						<h3 class="project-title">Kensho</h3>
 						<i class="fa fa-external-link"></i>
@@ -29,7 +29,7 @@
 					<p class="body-text">As the lead UX engineer at Kensho, I was tasked with making the visualization and quantitative analysis of thousands of financial data points a smooth and friendly user experience.  As a result, users are able to draw meaningful conclusions in a matter of minutes, something that would take days to do with traditional software.  I managed my own projects from pencil wireframes to pixel perfect mockups to lighting fast front end JavaScript, HTML5, and CSS3 and ensured everything interfaced seamlessly with our Python/Django REST API.  I also led usability studies to make sure the user experience was smooth and was responsible for making recommendations for improvements when it was not.  In addition, I created and maintained an internal CSS library and provided consistent design and style guidelines for the company.  I also created and implemented the marketing homepage and designed advertisements.</p>
 				</div>
 
-				<div class="project">
+				<div class="project friendbuy" [ngClass]="loadAnimation">
 					<a class="link" href="http://www.friendbuy.com" target="_blank">
 						<h3 class="project-title">Friendbuy</h3>
 						<i class="fa fa-external-link"></i>
@@ -37,7 +37,7 @@
 					<p class="body-text">Friendbuy provides easily customizable embedded sharing widgets to create customer referral programs without the hassle of coding.  As a developer, I dissected PSD widget designs and implemented them in HTML, JavaScript, and CSS.  I was also tasked with creating more user friendly interfaces and updating and maintaining the company's marketing page.</p>
 				</div>
 
-				<div class="project">
+				<div class="project mit" [ngClass]="loadAnimation">
 					<a class="link" href="http://education.mit.edu/portfolio_page/vanished/" target="_blank">
 						<h3 class="project-title">Vanished - MIT Media Lab / The Education Arcade</h3>
 						<i class="fa fa-external-link"></i>
@@ -45,7 +45,7 @@
 					<p class="body-text">Vanished was a curated alternate reality science mystery game designed to teach middle school students about the dangers of global warming.  I was tasked with designing flash games and created vector art assets.  I also worked with a team on the information architecture for the game's Drupal based website.</p>
 				</div>
 
-				<div class="project">
+				<div class="project blinq" [ngClass]="loadAnimation">
 					<a class="link" href="http://www.blinqphoto.com" target="_blank">
 						<h3 class="project-title">Blinq Photo</h3>
 						<i class="fa fa-external-link"></i>
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="tools col-md-10 col-xs-offset-1 col-md-offset-0">
+	<section class="tools col-md-10 col-xs-offset-1 col-md-offset-0" [ngClass]="loadAnimation">
 		<div class="row">
 			<div class="col-xs-12">
 				<h3 class="section-title">Tools I Use</h3>

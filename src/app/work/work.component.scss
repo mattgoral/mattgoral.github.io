@@ -60,5 +60,68 @@
 			}
 		}
 	}
-
 }
+
+.page-title { @include animation-duration($animation-master); }
+
+.what-i-do {
+	.section-title {
+		$wid-delay: .03s;
+		@include animation-delay($wid-delay);
+		@include animation-duration($animation-master - $wid-delay);
+	}
+
+	.what-i-do-text {
+		$widt-delay: .06s;
+		@include animation-delay($widt-delay);
+		@include animation-duration($animation-master - $widt-delay);
+	}
+
+	.body-text {
+		$bt-delay: .09s;
+		@include animation-delay($bt-delay);
+		@include animation-duration($animation-master - $bt-delay);
+	}
+}
+
+.past-projects {
+	.section-title {
+		$pp-delay: .2s;
+		@include animation-delay($pp-delay);
+		@include animation-duration($animation-master - $pp-delay);
+	}
+
+	.kensho {
+		$kensho-delay: .23s;
+		@include animation-delay($kensho-delay);
+		@include animation-duration($animation-master - $kensho-delay);
+	}
+
+	.friendbuy {
+		$friendbuy-delay: .26s;
+		@include animation-delay($friendbuy-delay);
+		@include animation-duration($animation-master - $friendbuy-delay);
+	}
+
+	.mit {
+		$mit-delay: .29s;
+		@include animation-delay($mit-delay);
+		@include animation-duration($animation-master - $mit-delay);
+	}
+
+	.blinq {
+		$blinq-delay: .32s;
+		@include animation-delay($blinq-delay);
+		@include animation-duration($animation-master - $blinq-delay);
+	}
+}
+
+.tools {
+	$tools-delay: .4s;
+	@include animation-delay($tools-delay);
+	@include animation-duration($animation-master - $tools-delay);
+}
+
+
+
+
