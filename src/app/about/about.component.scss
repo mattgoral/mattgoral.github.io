@@ -2,4 +2,66 @@
 
 #about {
 	@include animation-duration($animation-master);
+
+	h1, h3, p { margin: 0; }
+
+	.about-tiles {
+		margin-top: 50px;
+
+		.row {
+			margin-bottom: 150px;
+			@media screen and (min-width: $screen-md) {
+				align-items: center;
+				display: flex;
+			}
+		}
+	}
+
+	.text {
+		h3 {
+			font-size: 30px;
+			line-height: 46px;
+			text-align: center;
+			@media screen and (max-width: $screen-md) {
+				margin-top: 50px;
+			}
+		}
+
+		.me {
+			font-size: 60px;
+			line-height: 100px;
+			text-align: center;
+			@media screen and (max-width: $screen-md) {
+				margin-top: 150px;
+			}
+		}
+
+		.travel, .cars {
+			@media screen and (min-width: $screen-md) {
+				margin-top: -40px;
+			}
+		}
+	}
+	
+	.picture {
+		img { width: 100%; }
+
+		.caption {
+			font-weight: 300;
+			padding: 5px;
+			text-align: center;
+		}
+	}
+}
+
+.show-med {
+	@media screen and (min-width: $screen-md) {
+		display: none;
+	}
+}
+
+.hidden-med {
+	@media screen and (max-width: $screen-md) {
+		display: none;
+	}
 }

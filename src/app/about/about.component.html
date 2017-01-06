@@ -1,10 +1,58 @@
 <div id="about" class="row" [ngClass]="loadAnimation">
-	<h2>about me</h2>
-	<p>
-		I am a user focused software engineer that has an obsession with efficient design.  I use Web 2.0 technologies to build innovative new ways to experience and interact with digital media.  I thrive in creative, cutting edge, and fast paced environments.<br/>
+	<div class="col-xs-10 col-xs-offset-1">
+		<h2 class="page-title" [ngClass]="loadAnimation">About Me</h2>
+	</div>
+	<div class="about-tiles col-xs-10 col-xs-offset-1 col-md-offset-0">
+		<div class="row me-row">
+			<div class="picture col-md-6">
+				<img src="http://res.cloudinary.com/mattgoral/image/upload/v1483690120/me_bpqg7f.jpg">
+			</div>
+			<div class="text col-md-6">
+				<h1 class="me">I'm Matt<br/>I write code</h1>
+			</div>
+		</div>
 
-		As the lead UX engineer at Kensho, I was tasked with making the visualization and quantitative analysis of thousands of financial data points a smooth and friendly user experience.  As a result, users are able to draw meaningful conclusions in a matter of minutes, something that would take days to do with traditional software.  I managed my own projects from pencil wireframes to pixel perfect mockups to lighting fast front end JavaScript, HTML5, and CSS3.  During my tenure the company grew from 3 to 30 people, received funding from Google and Goldman Sachs, and increased in value from $500k to $150M.<br/>
+		<div class="row school-row">
+			<div class="text col-md-4 hidden-med">
+				<h3 class="school">I studied Mechanical Engineering and Comparative Media Studies at MIT</h3>
+			</div>
+			<div class="picture col-md-8">
+				<img src="http://res.cloudinary.com/mattgoral/image/upload/v1483686833/MIT_i7phbu.jpg">
+			</div>
+			<div class="text col-md-4 show-med">
+				<h3 class="school">I studied Mechanical Engineering and Comparative Media Studies at MIT</h3>
+			</div>
+		</div>
 
-		I’ve been on an extended vacation for the past year to travel and work on personal projects but I am now looking for new opportunities to bring new ideas to life and allow me to be creative and get my hands dirty working with all the moving parts of a project.
-	</p>
+		<div class="row travel-row">
+			<div class="picture col-md-4 col-sm-6">
+				<img src="http://res.cloudinary.com/mattgoral/image/upload/v1483691841/alps_l5qyhk.jpg">
+				<p class="caption">Snowboarding in Switzerland</p>
+			</div>
+			<div class="picture col-md-4 col-sm-6">
+				<img src="http://res.cloudinary.com/mattgoral/image/upload/v1483691190/maui_dto8go.jpg">
+				<p class="caption">Off roading in Maui</p>
+			</div>
+			<div class="text col-md-4 col-sm-12">
+				<h3 class="travel">I enjoy travel</h3>
+			</div>
+		</div>
+
+		<div class="row cars-row">
+			<div class="picture col-md-4 col-sm-6">
+				<img src="http://res.cloudinary.com/mattgoral/image/upload/v1483690120/porsche_mozlyc.jpg">
+				<p class="caption">Malibu canyon run</p>
+			</div>
+			<div class="picture col-md-4 col-sm-6">
+				<img src="http://res.cloudinary.com/mattgoral/image/upload/v1483690120/ferrari_xrpnlp.jpg">
+				<p class="caption">Track day in Vegas</p>
+			</div>
+			<div class="text col-md-4 col-sm-12 hidden-med">
+				<h3 class="cars">and cars</h3>
+			</div>
+			<div class="text col-md-4 col-sm-12 show-med">
+				<h3 class="cars">and cars</h3>
+			</div>
+		</div>
+	</div>
 </div>
