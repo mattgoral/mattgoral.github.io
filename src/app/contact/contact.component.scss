@@ -1,9 +1,6 @@
-@import "~compass-mixins/lib/_animate";
 @import "../app.component";
 
 #contact {
-	@include animation-duration($animation-master);
-
 	.contact-link-text {
 		text-align: center;
 		font-size: 80px;
@@ -13,5 +10,21 @@
 			position: relative;
 			top: 8px;
 		}
+	}
+
+	.page-title {
+		@include animation-duration($animation-master);
+	}
+
+	.mail-link {
+		$mail-delay: .05s;
+		@include animation-delay($mail-delay);
+		@include animation-duration($animation-master - $mail-delay);
+	}
+
+	.linkedIn-link {
+		$mail-delay: .1s;
+		@include animation-delay($mail-delay);
+		@include animation-duration($animation-master - $mail-delay);
 	}
 }
