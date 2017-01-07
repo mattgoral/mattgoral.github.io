@@ -10,17 +10,17 @@ export class HomeComponent implements OnInit {
 	contentActive = 'app-tab-welcome';
 
 	tabs = [{
-            title: 'easter eggs!',
-            icon: 'fa-smile-o',
+            title: 'Thanks!',
+            icon: 'fa-heart',
             url: 'app-tab-easter-eggs',
             active: false
         }, {
-            title: 'about this site',
+            title: 'About This Site',
             icon: 'fa-info-circle',
             url: 'app-tab-about-site',
             active: false
         }, {
-            title: 'welcome',
+            title: 'Welcome',
             icon: 'fa-star',
             url: 'app-tab-welcome',
             active: true
@@ -33,6 +33,10 @@ export class HomeComponent implements OnInit {
 		tab.active = true;
 		this.contentActive = tab.url;
 	}
+
+  closeBrowser() {
+    this.loadAnimation = 'animated zoomOutDown';
+  }
 
   ngOnInit() {
   	this.loadAnimation = 'animated zoomInUp';
