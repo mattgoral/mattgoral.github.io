@@ -65,3 +65,45 @@
 		display: none;
 	}
 }
+
+.page-title {
+	@include animation-duration($animation-master);
+}
+
+.me-row {
+	.picture {
+		$me-delay: .1s;
+		@include animation-delay($me-delay);
+		@include animation-duration(0.1s);
+	}
+
+	.me {
+		$me-text-delay: 0s;
+		@include animation-delay($me-text-delay);
+		@include animation-duration($animation-master - $me-text-delay);
+	}
+}
+
+.school-row {
+	$s-delay: .2s;
+	@include animation-delay($s-delay);
+	@include animation-duration($animation-master - $s-delay);
+}
+
+.travel-row{
+	$t-delay: .3s;
+	@include animation-delay($t-delay);
+	@include animation-duration($animation-master - $t-delay);
+}
+
+.cars-row {
+	$c-delay: .4s;
+	@include animation-delay($c-delay);
+	@include animation-duration($animation-master - $c-delay);
+}
+
+.noodles-row {
+	$n-delay: .5s;
+	@include animation-delay($n-delay);
+	@include animation-duration($animation-master - $n-delay);
+}
