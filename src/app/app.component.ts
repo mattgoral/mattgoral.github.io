@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	titleAnimation = '';
+
+  constructor(private router: Router) { }
+
+  titleAnimation = '';
   navAnimation = '';
 
   ngOnInit() {
   	this.titleAnimation = "animated fadeIn";
     this.navAnimation = 'animated fadeInLeft';
+    this.router.events.subscribe((evt) => {
+        if (!(evt instanceof NavigationEnd)) {
+            return;
+        }
+        document.body.scrollTop = 0;
+    });
   }
 }
