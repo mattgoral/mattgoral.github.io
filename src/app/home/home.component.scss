@@ -84,7 +84,9 @@ $tab-angle: 10px;
 				padding: 0 6px;
 				width: 120px;
 				@media screen and (max-width: $screen-sm) {
-					width: 105px;
+					font-size: $tab-height / 3.5;
+					line-height: $tab-height - 2px;
+					width: 90px;
 				}
 
 				i {
