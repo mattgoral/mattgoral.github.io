@@ -13,17 +13,20 @@ export class HomeComponent implements OnInit {
             title: 'Thanks!',
             icon: 'fa-heart',
             url: 'app-tab-easter-eggs',
-            active: false
+            active: false,
+            hideSmall: true
         }, {
             title: 'About This Site',
             icon: 'fa-info-circle',
             url: 'app-tab-about-site',
-            active: false
+            active: false,
+            hideSmall: false
         }, {
             title: 'Welcome',
             icon: 'fa-star',
             url: 'app-tab-welcome',
-            active: true
+            active: true,
+            hideSmall: false
     }];
 
 	selectTab(tab) {

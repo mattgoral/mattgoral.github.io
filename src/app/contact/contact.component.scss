@@ -6,9 +6,16 @@
 		font-size: 80px;
 		margin-top: 100px;
 
+		@media screen and (max-width: $screen-sm) {
+			font-size: 40px;
+		}
+
 		.small-text {
 			position: relative;
 			top: 8px;
+			@media screen and (max-width: $screen-sm) {
+				top: 4px;
+			}
 		}
 	}
 
