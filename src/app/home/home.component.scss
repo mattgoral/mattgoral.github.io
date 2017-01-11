@@ -83,6 +83,9 @@ $tab-angle: 10px;
 				margin-top: 1px;
 				padding: 0 6px;
 				width: 120px;
+				@media screen and (max-width: $screen-sm) {
+					width: 105px;
+				}
 
 				i {
 					margin-left: -2px;

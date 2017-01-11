@@ -44,7 +44,7 @@ h3 {
 	display: inline-block;
 	@media screen and (max-width: $screen-md) {
 		font-size: 24px;
-		margin: 20px 20px 0 0;
+		margin: 20px 10px 0 0;
 		position: relative;
 		top: 2px;
 	}
@@ -83,7 +83,7 @@ nav {
 		color: #666;
 		display: inline-block;
 		font-size: 16px;
-		margin-right: 10px;
+		margin-right: 5px;
 		text-decoration: none;
 
 		.nav-text { vertical-align: middle; }
