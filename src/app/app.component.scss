@@ -85,13 +85,15 @@ p {
 
 	@media screen and (max-width: $screen-sm) {
 		font-size: 20px;
+		position: relative;
 		top: 2px;
 	}
 
 	@media screen and (max-width: $screen-xs) {
 		display: flex;
 		font-size: 20px;
-		top: 0px;
+		position: relative;
+		top: -3px;
 	}
 }
 

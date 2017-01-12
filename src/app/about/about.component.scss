@@ -11,10 +11,11 @@
 		margin-top: 50px;
 
 		.row {
-			margin-bottom: 150px;
+			margin-bottom: 50px;
 			@media screen and (min-width: $screen-md) {
 				align-items: center;
 				display: flex;
+				margin-bottom: 150px;
 			}
 		}
 	}
