@@ -3,12 +3,11 @@
 #about-site-container {
 	padding: 10%;
 
-	h1 {
+	h3 {
 		@include animation-duration(.3s);
 	}
 	
-	h3 {
-		line-height: 1.5em;
+	h5 {
 		@include animation-delay(.05s);
 		@include animation-duration(.2s);
 	}

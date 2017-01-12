@@ -107,7 +107,7 @@ $tab-angle: 10px;
 			.left-angle {
 				border-bottom: $tab-height solid $url-border-color;
 				border-left: 10px solid transparent;
-				margin-right: -4px
+				margin-right: -3px
 			}
 
 			.left-angle::before {
@@ -119,7 +119,7 @@ $tab-angle: 10px;
 			.right-angle {
 				border-left: $tab-angle solid $url-border-color;
 				border-top: $tab-height solid transparent;
-				margin-left: -4px;
+				margin-left: -3px;
 			}
 
 			.right-angle::after {

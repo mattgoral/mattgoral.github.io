@@ -12,6 +12,7 @@
 	}
 	.tagline {
 		font-size: 4em;
+		font-weight: 300;
 		@include animation-delay($animation-master);
 		@include animation-duration($animation-master);
 		@media screen and (max-width: $screen-sm) {
