@@ -1,6 +1,7 @@
 @import "~compass-mixins/lib/_animate";
 @import "~compass-mixins/lib/_compass";
 
+$screen-xs: 480px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
@@ -21,32 +22,54 @@ h1 {
 }
 
 h2 {
-	font-size: 50px;
+	font-size: 40px;
 }
 
 h3 {
-	font-size: 30px;
+	font-size: 26px;
 }
 
 h4 {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 h5 {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 300;
 	line-height: 36px;
 }
 
 p {
-	font-size: 16px;
-	line-height: 26px;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+@media screen and (min-width: $screen-md) {
+	h1 { font-size: 30px; }
+
+	h2 { font-size: 50px; }
+
+	h3 { font-size: 30px; }
+
+	h4 { font-size: 24px; }
+
+	h5 {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 36px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 26px;
+	}
 }
 
 .navbar {
 	font-weight: 300;
 	position: fixed;
 	@media screen and (max-width: $screen-md) {
+		margin-top: 20px;
 		width: 100%;
 	}
 }
@@ -55,7 +78,7 @@ p {
 	display: inline-block;
 	@media screen and (max-width: $screen-md) {
 		font-size: 24px;
-		margin: 20px 10px 0 0;
+		margin: 0 30px 0 0;
 		position: relative;
 		top: 2px;
 	}
@@ -63,6 +86,12 @@ p {
 	@media screen and (max-width: $screen-sm) {
 		font-size: 20px;
 		top: 2px;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		display: flex;
+		font-size: 20px;
+		top: 0px;
 	}
 }
 
@@ -76,10 +105,18 @@ p {
 	background-color: rgba(255, 255, 255, 0.9);
 	padding-bottom: 20px;
 	z-index: 1000;
+	@media screen and (max-width: $screen-xs) {
+		display: flex;
+	}
 }
 nav {
 	display: inline-block;
 	margin-left: -4px;
+
+	@media screen and (max-width: $screen-xs) {
+		display: flex;
+		flex-grow: 1;
+	}
 
 	.active {
 		font-weight: 700;
@@ -87,19 +124,26 @@ nav {
 	}
 
 	.nav-item {
-		@media screen and (min-width: $screen-md) {
-			border-bottom: 2px solid white;
-		}
 
 		@media screen and (min-width: $screen-md) {
 			width: 100%;
 			margin-top: 5px;
 		}
 
+		.nav-text {
+			@media screen and (min-width: $screen-md) {
+				border-bottom: 2px solid white;
+			}
+		}
+
+		@media screen and (max-width: $screen-xs) {
+			flex-grow: 1;
+		}
+
 		color: #666;
 		display: inline-block;
 		font-size: 16px;
-		margin-right: 7px;
+		margin-right: 10px;
 		text-decoration: none;
 
 		@media screen and (max-width: $screen-sm) {
@@ -129,8 +173,10 @@ nav {
 
 		&:hover, &.active {
 			@media screen and (max-width: $screen-md) {
-				border-bottom: 2px solid #333;
-				@include transition(.05s);
+				.nav-text {
+					border-bottom: 2px solid #333;
+					@include transition(.05s);
+				}
 			}
 			@media screen and (min-width: $screen-md) {
 				.bullet-container {
