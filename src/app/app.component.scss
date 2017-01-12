@@ -69,7 +69,7 @@ p {
 	font-weight: 300;
 	position: fixed;
 	@media screen and (max-width: $screen-md) {
-		margin-top: 20px;
+		padding-top: 20px;
 		width: 100%;
 	}
 }
