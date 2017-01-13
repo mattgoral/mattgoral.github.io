@@ -7,22 +7,52 @@
 <head>
   <meta charset="utf-8">
   <title>mattgoraldotcom</title>
-  <base href="/">
+  <base href="/mattgoraldotcom/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+  <script src="https://use.typekit.net/tyt7dbn.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
-
   <app-root id="app-root">
-  <h1 style="color:black; font-weight: 700; font-size: 100px;">loading</h1>
-  	<div class="loading-indicator">
-  		<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
-      <p>loading</p>
-  	</div>
+    <style>
+      .loading {
+        font-family: helvetica, arial, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 15%;
+        text-align: center;
+      }
+
+      @keyframes blink {
+          0% {
+            opacity: .2;
+          }
+          20% {
+            opacity: 1;
+          }
+          100% {
+            opacity: .2;
+          }
+      }
+
+      .loading span {
+          animation-name: blink;
+          animation-duration: 1.4s;
+          animation-iteration-count: infinite;
+          animation-fill-mode: both;
+      }
+
+      .loading span:nth-child(2) {
+          animation-delay: .2s;
+      }
+
+      .loading span:nth-child(3) {
+          animation-delay: .4s;
+      }
+    </style>
+    <p class="loading">Loading<span>.</span><span>.</span><span>.</span></p>
   </app-root>
-<script src="https://use.typekit.net/tyt7dbn.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 <script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.10911aa852e664fd93fa.bundle.js"></script><script type="text/javascript" src="main.b4957bba6aa0f563e649.bundle.js"></script></body>
 </html>
