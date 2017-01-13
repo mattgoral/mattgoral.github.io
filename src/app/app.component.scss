@@ -233,6 +233,12 @@ nav {
 		@include animation-duration($animation-master - $contact);
 	}
 
+	#nav-resume {
+		$resume: .4s;
+		@include animation-delay($resume);
+		@include animation-duration($animation-master - $resume);
+	}
+
 	.title, .nav-link {
     	animation-duration: $animation-master;
 	}
